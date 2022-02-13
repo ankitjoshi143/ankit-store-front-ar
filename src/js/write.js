@@ -24,9 +24,9 @@ document.forms["rentalForm"].addEventListener("submit", onAddRental);
 
     async function uploadNewVacactionRenal() {
         // form data
-        const year = document.querySelector('#yearName').value.trim();
-        const carName = document.querySelector('#carName').value.trim();
-        const model = document.querySelector('#modelName').value.trim();
+        const yearMade = document.querySelector('#year').value.trim();
+        const carMake = document.querySelector('#make').value.trim();
+        const carModel = document.querySelector('#model').value.trim();
         const file = document.querySelector('#rentalImage').files[0]
         
         // paths to the data to write
@@ -45,12 +45,12 @@ document.forms["rentalForm"].addEventListener("submit", onAddRental);
         
         set(itemRef,{
            key:itemRef.key,
-           sku:`CNBRABC${itemRef.key}`,
+           sku:`abc${itemRef.key}`,
            urlPath,
            storagePath,
-           year,
-           carName,
-           model
+           yearMade,
+           carMake,
+           carModel
         })
         
     }

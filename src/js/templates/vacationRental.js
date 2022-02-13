@@ -4,16 +4,16 @@
           setup the template.js file.
 */
 
-function vacationRental({key, urlPath, year, carName, model }){
+function vacationRental({key, urlPath,carMake, carModel, yearMade }){
     const template = `
         <aside class="vacation-rentals">
 
             <figure>
-                <img src="${urlPath}" width="160" alt="view of the rental property located in ${city}">
+                <img src="${urlPath}" width="160" alt="car image">
                 <figcaption>
-                  <h2>${year}</h2>
-                  <h2>${carName}</h2>
-                  <h2>${model}</h2>
+                  <h2>${carMake}</h2>
+                  <h2>${carModel}</h2>
+                  <h2>${yearMade}</h2>
                 </figcaption>
             </figure>
 
