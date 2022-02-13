@@ -2,8 +2,8 @@ import { ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage
 import {ref as databaseRef, push, set, get, remove} from 'firebase/database'
 import { db, storage  } from "./libs/firebase/firebaseConfig";
 
-document.querySelector("#rentalImage").addEventListener("change", onImageSelected);
-document.forms["rentalForm"].addEventListener("submit", onAddRental); 
+document.querySelector("#carImage").addEventListener("change", onImageSelected);
+document.forms["carForm"].addEventListener("submit", onAddRental); 
 
 
     function onAddRental(e) {
@@ -27,11 +27,11 @@ document.forms["rentalForm"].addEventListener("submit", onAddRental);
         const yearMade = document.querySelector('#year').value.trim();
         const carMake = document.querySelector('#make').value.trim();
         const carModel = document.querySelector('#model').value.trim();
-        const file = document.querySelector('#rentalImage').files[0]
+        const file = document.querySelector('#carImage').files[0]
         
         // paths to the data to write
         const imageRef =     storageRef( storage, `images/${file.name}`);
-        const dataRef =  databaseRef( db, 'rentals')
+        const dataRef =  databaseRef( db, 'cars')
 
         // uploading file to the storage bucket
         const uploadResult = await uploadBytes(imageRef, file);
