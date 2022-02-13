@@ -1,0 +1,69 @@
+.header {
+          padding:0px 1rem;
+          margin-bottom: 1rem;
+          box-shadow: 1px 1px 2px #888888
+      }
+      /* Logo/ Brand Section       */
+      .brand {
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .brand-logo {
+        text-decoration: none;
+        color: #212529;
+      }
+      /* End of Logo/ Brand Section     */
+      /*    Nav links        */
+	    .nav {
+        text-align: center;
+        background-color: #f3d9fa;
+        padding: 10px 0px;
+      }
+      .nav-link {
+        text-decoration: none;
+        display: block;
+        padding:10px;
+        color: #212529;
+        margin-bottom: 5px;
+      }
+      .nav-link:hover {
+        text-decoration:none;
+        opacity: 0.6;
+      }
+      .is-active {
+        display: none;
+      }
+
+      
+      /* Hide nav links on screens with width below 768px  */
+      @media (min-width: 768px) {
+        .header {
+          display: flex;
+          justify-content: space-between;
+        }
+        .nav-burger {
+          display: none;
+        }
+        .nav-cancel{
+          display: none;
+        }
+        /*  Desktop  Nav links        */
+        .nav {
+          display: block;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          font-size: 1.1rem;
+          background-color: #fff;
+        }
+        .nav-link {
+          text-decoration: none;
+          display: inline-block;
+          padding: 20px 15px;
+          color: #212529;
+        /*  margin-bottom: 5px; */
+        }
+      /*   End of Nav links        */
+      }
