@@ -2,10 +2,23 @@ import { ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage
 import { ref as databaseRef, set, get } from 'firebase/database';
 import { db, storage } from "./libs/firebase/firebaseConfig";
 
+document.querySelector("#carImage").addEventListener("change", onImageSelected);
+function onImageSelected(e) {
+  //selected file
+  // file objets   [fileObj, fileObj, fileObj]
+  let file = e.target.files[0];
+  console.log(file)
+  // update the display with the requested image
+  document.querySelector(".display img").src = URL.createObjectURL(file);
+   
+  }
+
 const carForm = document.forms['carForm'];
+const key = sessionStorage.getItem('key');
+let currentCar;
 
 async function pageInit() {
-  const key = sessionStorage.getItem('key');
+  
   // get data from RTD 
   const carRef = databaseRef(db, `cars/${key}`)
   // add data to the form
@@ -13,7 +26,7 @@ async function pageInit() {
 
   //formatter for the form 
   if (carSnapShot.exists()) {
-    setFieldValues(carSnapShot.val())
+    setFieldValues(currentCar)
   }
 
   carForm.addEventListener('submit', onUpdateCar)
@@ -48,7 +61,7 @@ async function updateCarData() {
     const imageRef = storageRef(storage, "path")
     
   }
-  //const key = sessionStorage.getItem('key');
+
   const dataRef = databaseRef(db, `rentals/${key}`)
 
   set(dataRef, {
