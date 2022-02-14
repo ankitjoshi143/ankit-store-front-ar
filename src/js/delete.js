@@ -15,8 +15,13 @@ deleteButton.addEventListener('click', pageInit => {
   function pageInit(){
   const key = sessionStorage.getItem('key');
   const dataRef = databaseRef(db, `cars/${key}`)
-  remove(dataRef)
-  console.log(dataRef)
+  remove(dataRef).then(()=>
+
+    {
+
+      window.location.assign('index.html')
+
+    })
   }
   pageInit()
 })
