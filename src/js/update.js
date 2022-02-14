@@ -65,10 +65,12 @@ async function updateCarData() {
   const dataRef = databaseRef(db, `rentals/${key}`)
 
   set(dataRef, {
-
-
-
-
+    key:carRef.key,
+    sku: `abc${carRef.Key}`,
+    imageCar,
+    carYear,
+    carMake,
+    carModel
   })
 }
 

@@ -53,6 +53,7 @@
 
   <main>
 
+
     <aside class="crud-with-rtd d-flex justify-content-around">
       <a href="read.html" class="read">Read Data from firebase RTB</a>
       <a href="write.html" class="write">Write data to firebase RTB</a>
@@ -60,7 +61,9 @@
       <a href="delete.html" class="delete">Delete data from firebase RTD</a>
     </aside>
 
-
+    <div class="sidenav">
+      <a href="write.html">Add New Car</a>
+    </div>
     <style>
       .cars-read {
         margin: 2rem auto;
@@ -68,8 +71,63 @@
 
       .list-group-item {
         background-color: rgb(0 0 0 / 5%);
+
+      }
+
+      /* The sidebar menu */
+      .sidenav {
+        height: 100%;
+        /* Full-height: remove this if you want "auto" height */
+        width: 160px;
+        /* Set the width of the sidebar */
+        position: fixed;
+        /* Fixed Sidebar (stay in place on scroll) */
+        z-index: 1;
+        /* Stay on top */
+        top: 72px;
+        /* Stay at the top */
+        left: 0;
+        background-color: rgb(72 95 199);
+        /* Black */
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 20px;
+      }
+
+      /* The navigation menu links */
+      .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #ffffff;
+        display: block;
+      }
+
+      /* When you mouse over the navigation links, change their color */
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+
+      /* Style page content */
+      .main {
+        margin-left: 160px;
+        /* Same as the width of the sidebar */
+        padding: 0px 10px;
+      }
+
+      /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+      @media screen and (max-height: 450px) {
+        .sidenav {
+          padding-top: 15px;
+        }
+
+        .sidenav a {
+          font-size: 18px;
+        }
       }
     </style>
+
+
   </main>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
