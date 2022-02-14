@@ -14,7 +14,9 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css" />
-    <script type="module" src="js/index.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="module" src="js/update.js"></script>
   </head>
 
   <body>
@@ -34,23 +36,50 @@
       </nav>
       
     </header>
-   
-    <!-- <header class="page-header">
-      <h1>Firebase RTB</h1>
-      <p>real time database</p>     
-    </header> -->
+    <div class="text-center">
+      <h1>Update Car Info</h1>
+    </div>
   
-    <main>
+    <main class="card cars-read border-dark rounded mx-auto" style="width: 26rem;">
 
-         <aside class="crud-with-rtd">
-            <a href="read.html" class="read">read data from firebase RTB</a>
-            <a href="write.html" class="write">write data to firebase RTB</a>
-            <a href="update.html" class="update">update data in the firebase RTB</a>
-            <a href="delete.html" class="delete">delete data from firebase RTD</a>
-         </aside>
+      <form id="carForm" class="add-new-property">
+
+        <div class="property-image form-control">
+          <div class="carUploadImage">
+            <img src="static/images/default.jpg" style="width: 24rem;" alt="default image of car">
+          </div>
+          <label class="btn btn-primary mt-3" for="carImage">Select image </label>
+          <input type="file" id="carImage" style="display:none; width: 24rem;" class="select-file"
+            accept=".jpg, .png, .jpeg, .webp">
+
+        </div>
+
+        <div class="car-name form-control">
+          <label for="year">Year</label>
+          <input id="year" type="text" placeholder="Year Made" style="width: inherit;"><br>
+          <label for="make">Car Make</label>
+          <input id="make" type="text" placeholder="Car Make" style="width: inherit;"><br>
+          <label for="model">Model</label>
+          <input id="model" type="text" placeholder="Car Model" style="width: inherit;">
+        </div>
+
+        <div class="submit-button form-control">
+          <button  class="btn btn-success" type="submit">Add Car</button>
+
+        </div>
+      </form>
     </main>
 
-    <script src="js/nav-toggle/navtoggle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="js/nav-toggle/navtoggle.js"></script>
   </body>
 </html>
  

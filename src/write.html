@@ -10,8 +10,10 @@
   <meta name="description" content="Assessment 1 for DMIT 2008" />
   <title>Assessment 1 || Firebase & Vanilla js</title>
 
-  <!-- <link rel="stylesheet" href="css/reset.css"> -->
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script type="module" src="js/write.js"></script>
 </head>
 
@@ -40,37 +42,45 @@
 
   </header>
 
+  <main class="card cars-read border-dark rounded mx-auto" style="width: 26rem;">
+    
+      <form id="carForm" class="add-new-property">
 
+        <div class="property-image form-control">
+          <div class="display">
+            <img src="static/images/default.jpg" style="width: 24rem;" alt="default image of car">
+          </div>
+          <label class="btn btn-primary mt-3" for="carImage">Select image </label>
+          <input type="file" id="carImage" style="display:none; width: 24rem;" class="select-file"
+            accept=".jpg, .png, .jpeg, .webp">
 
-  <main>
-    <form id="carForm" class="add-new-property">
-
-      <div class="property-image form-control">
-        <div class="display">
-          <img src="static/images/default.jpg" alt="default image of car">
         </div>
-        <label for="carImage">Select image </label>
-        <input type="file" id="carImage" style="display:none" class="select-file" accept=".jpg, .png, .jpeg, .webp">
 
-      </div>
+        <div class="car-name form-control">
+          <label for="year">Year</label>
+          <input id="year" type="text" placeholder="Year Made" style="width: inherit;"><br>
+          <label for="make">Car Make</label>
+          <input id="make" type="text" placeholder="Car Make" style="width: inherit;"><br>
+          <label for="model">Model</label>
+          <input id="model" type="text" placeholder="Car Model" style="width: inherit;">
+        </div>
 
-      <div class="car-name form-control">
-        <label for="year">Year</label>
-        <input id="year" type="text" placeholder="Year Made">
-        <label for="make">Car Make</label>
-        <input id="make" type="text" placeholder="Car Make">
-        <label for="model">Model</label>
-        <input id="model" type="text" placeholder="Car Model">
-      </div>
+        <div class="submit-button form-control">
+          <button  class="btn btn-success" type="submit">Add Car</button>
 
-      <div class="submit-button form-control">
-        <button type="submit">Add Car</button>
-
-      </div>
-    </form>
-
+        </div>
+      </form>
+   
   </main>
-
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
   <script src="js/nav-toggle/navtoggle.js"></script>
 </body>
 
