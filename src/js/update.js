@@ -48,7 +48,7 @@ async function updateCarData() {
     const imageRef = storageRef(storage, "path")
     
   }
-  const key = sessionStorage.getItem('key');
+  //const key = sessionStorage.getItem('key');
   const dataRef = databaseRef(db, `rentals/${key}`)
 
   set(dataRef, {
